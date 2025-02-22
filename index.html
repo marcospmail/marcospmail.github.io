@@ -3,14 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
     <meta
       name="description"
       content="Marcos Paulo - Full Stack JavaScript Developer. Experienced web developer specializing in modern JavaScript frameworks and full-stack development."
     />
     <meta
       name="keywords"
-      content="JavaScript Developer, Full Stack Developer, Web Development"
+      content="JavaScript Developer, Full Stack Developer, Web Development, React Developer, Node.js Developer"
     />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://marcosp.com/" />
     <meta
       property="og:title"
       content="Marcos Paulo - Full Stack JavaScript Developer"
@@ -19,31 +25,97 @@
       property="og:description"
       content="Experienced web developer specializing in modern JavaScript frameworks and full-stack development."
     />
-    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://marcosp.com/" />
+    <meta
+      property="twitter:title"
+      content="Marcos Paulo - Full Stack JavaScript Developer"
+    />
+    <meta
+      property="twitter:description"
+      content="Experienced web developer specializing in modern JavaScript frameworks and full-stack development."
+    />
+
     <meta name="theme-color" content="#000000" />
-    <title><Marcos Paulo /></title>
+    <link rel="canonical" href="https://marcosp.com/" />
+    <title>&lt;Marcos Paulo /&gt;</title>
+
+    <!-- Preconnects and Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.iconify.design" crossorigin />
+
+    <!-- Preload Critical Resources -->
+    <link
+      rel="preload"
+      href="https://api.iconify.design/mdi:github.svg?color=white"
+      as="image"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://api.iconify.design/mdi:linkedin.svg?color=white"
+      as="image"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://api.iconify.design/mdi:email.svg?color=white"
+      as="image"
+      crossorigin
+    />
+
+    <!-- Preload Fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <!-- Fallback in case JS is disabled -->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      />
+    </noscript>
+
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧑🏻‍💻</text></svg>"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Marcos Paulo",
+        "jobTitle": "Full Stack JavaScript Developer",
+        "url": "https://marcosp.com",
+        "sameAs": [
+          "https://github.com/marcospmail",
+          "https://www.linkedin.com/in/marcospmail/"
+        ]
+      }
+    </script>
+
     <style>
-      @keyframes gradient {
-        0% {
-          background-position: 0%;
-        }
-        100% {
-          background-position: -200%;
-        }
+      /* Base Styles */
+      :root {
+        height: 100%;
       }
 
-      :root {
+      html,
+      body {
         height: 100%;
       }
 
@@ -52,8 +124,14 @@
         overflow-x: hidden;
       }
 
-      html {
-        height: 100%;
+      /* Animations */
+      @keyframes gradient {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: -200%;
+        }
       }
 
       @keyframes fadeInUp {
@@ -86,53 +164,52 @@
         }
       }
 
+      /* Utility Classes */
       .animate-gradient {
         background-size: 200% auto;
         animation: gradient 4s linear infinite;
       }
 
+      /* Fade-in Animation Classes */
       .fade-in-1 {
-        opacity: 0;
         animation: fadeInUp 0.6s ease forwards;
       }
-
       .fade-in-2 {
-        opacity: 0;
         animation: fadeInUp 0.6s ease forwards 0.2s;
       }
-
       .fade-in-3 {
-        opacity: 0;
         animation: fadeInUp 0.6s ease forwards 0.4s;
       }
-
       .fade-in-4 {
-        opacity: 0;
         animation: fadeInUp 0.6s ease forwards 0.6s;
       }
-
-      .name-wrapper {
-        position: relative;
+      .fade-in-1,
+      .fade-in-2,
+      .fade-in-3,
+      .fade-in-4 {
+        opacity: 0;
       }
 
+      /* Fluid Typography */
       .fluid-text-emoji {
         font-size: clamp(3rem, 5vw, 4rem);
       }
-
       .fluid-text-name {
         font-size: clamp(1.5rem, 5vw, 3rem);
       }
-
       .fluid-text-title {
         font-size: clamp(1rem, 3vw, 1.5rem);
       }
-
       .fluid-text-body {
         font-size: clamp(0.875rem, 2.5vw, 1.125rem);
       }
-
       .fluid-text-button {
         font-size: clamp(0.875rem, 2vw, 1rem);
+      }
+
+      /* Name Animation Components */
+      .name-wrapper {
+        position: relative;
       }
 
       .name-content {
@@ -148,6 +225,7 @@
         animation: blink 1s step-end infinite;
       }
 
+      /* Other Elements */
       .bracket-left,
       .bracket-right {
         opacity: 1;
@@ -158,16 +236,28 @@
         animation: fadeInUp 1s ease forwards;
       }
 
+      /* Icon Styles */
       .hover\:social-icon-dark:hover img {
         filter: brightness(0);
+        transition: filter 0.2s ease;
       }
     </style>
+
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ["Inter", "sans-serif"],
+              sans: [
+                "Inter",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "Helvetica Neue",
+                "Arial",
+                "sans-serif",
+              ],
             },
           },
         },
@@ -196,26 +286,50 @@
     </script>
   </head>
   <body class="bg-black text-white flex justify-center items-center font-sans">
-    <main class="w-full text-center p-8 max-w-[700px] mx-auto">
+    <!-- Skip to main content for accessibility -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-white text-black p-4"
+    >
+      Skip to main content
+    </a>
+
+    <main
+      id="main-content"
+      class="w-full text-center p-8 max-w-[700px] mx-auto"
+    >
       <header>
-        <span class="text-white emoji fluid-text-emoji">🧑🏻‍💻</span>
+        <span
+          class="text-white emoji fluid-text-emoji"
+          role="img"
+          aria-label="Developer emoji"
+          >🧑🏻‍💻</span
+        >
 
         <h1
           class="fluid-text-name font-semibold mb-2 flex items-center justify-center"
         >
           <div class="name-wrapper flex items-center">
-            <span class="text-white bracket-left mr-1">&lt;</span>
+            <span class="text-white bracket-left mr-1" aria-hidden="true"
+              >&lt;</span
+            >
             <span
               class="name-content bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-blue-500 animate-gradient inline-block text-transparent bg-clip-text"
+              aria-label="Marcos Paulo"
             ></span>
-            <span class="text-white bracket-right ml-1">&nbsp;</span>
-            <span class="text-white bracket-right ml-1">/&gt;</span>
+            <span class="text-white bracket-right ml-1" aria-hidden="true"
+              >&nbsp;</span
+            >
+            <span class="text-white bracket-right ml-1" aria-hidden="true"
+              >/&gt;</span
+            >
           </div>
         </h1>
         <p class="fluid-text-title text-gray-300 mb-6 fade-in-2">
           Full Stack Developer
         </p>
       </header>
+
       <section class="mb-10 fade-in-3">
         <p class="fluid-text-body text-gray-300 leading-relaxed">
           Passionate Full Stack Developer with expertise in modern JavaScript
@@ -224,8 +338,10 @@
           technologies.
         </p>
       </section>
+
       <nav
         class="flex flex-col sm:flex-row gap-4 items-center justify-center fade-in-4"
+        aria-label="Social links"
       >
         <a
           href="https://github.com/marcospmail"
@@ -238,6 +354,9 @@
             src="https://api.iconify.design/mdi:github.svg?color=white"
             class="w-5 h-5"
             alt=""
+            width="20"
+            height="20"
+            loading="lazy"
           />
           GitHub
         </a>
@@ -252,6 +371,9 @@
             src="https://api.iconify.design/mdi:linkedin.svg?color=white"
             class="w-5 h-5"
             alt=""
+            width="20"
+            height="20"
+            loading="lazy"
           />
           LinkedIn
         </a>
@@ -264,6 +386,9 @@
             src="https://api.iconify.design/mdi:email.svg?color=white"
             class="w-5 h-5"
             alt=""
+            width="20"
+            height="20"
+            loading="lazy"
           />
           Email
         </a>
