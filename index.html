@@ -46,6 +46,42 @@
         background-size: 200% auto;
         animation: gradient 4s linear infinite;
       }
+
+      .name-wrapper {
+        position: relative;
+        cursor: pointer;
+      }
+
+      .fluid-text {
+        font-size: clamp(1.5rem, 5vw, 3rem);
+      }
+
+      .name-content {
+        transition: width 0.5s ease, opacity 0.5s ease;
+        display: inline-block;
+        /* width: clamp(200px, 40vw, 320px); */
+        /* width: clamp(210px, 41vw); */
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .name-wrapper:hover .name-content {
+        width: 0;
+        opacity: 0;
+      }
+
+      .bracket-left,
+      .bracket-right {
+        transition: margin 0.5s ease;
+      }
+
+      .name-wrapper:hover .bracket-left {
+        margin-right: 0;
+      }
+
+      .name-wrapper:hover .bracket-right {
+        margin-left: 0;
+      }
     </style>
     <script>
       tailwind.config = {
@@ -65,18 +101,19 @@
     <main class="text-center p-8 max-w-[700px] mx-auto">
       <header>
         <h1
-          class="text-5xl font-semibold mb-2 flex items-center justify-center"
+          class="fluid-text font-semibold mb-2 flex items-center justify-center"
         >
-          <span class="text-white">&lt;</span>
-          <span
-            class="bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-blue-500 animate-gradient inline-block text-transparent bg-clip-text mx-1"
-          >
-            Marcos Paulo
-          </span>
-          <span class="text-white">&nbsp;</span>
-          <span class="text-white">/&gt;</span>
+          <div class="name-wrapper flex items-center">
+            <span class="text-white bracket-left mr-1">&lt;</span>
+            <span
+              class="name-content bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-blue-500 animate-gradient inline-block text-transparent bg-clip-text"
+            >
+              Marcos Paulo
+            </span>
+            <span class="text-white bracket-right ml-1">/&gt;</span>
+          </div>
         </h1>
-        <p class="text-gray-300 text-xl mb-6">
+        <p class="text-lg sm:text-xl text-gray-300 mb-6">
           Full Stack JavaScript Developer
         </p>
       </header>
