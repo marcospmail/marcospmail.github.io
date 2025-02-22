@@ -21,10 +21,10 @@
     />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#000000" />
-    <title>Marcos Paulo </></title>
+    <title><Marcos Paulo /></title>
     <link
       rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧑🏻‍💻</text></svg>"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,9 +42,41 @@
           background-position: -200%;
         }
       }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
       .animate-gradient {
         background-size: 200% auto;
         animation: gradient 4s linear infinite;
+      }
+
+      .fade-in-1 {
+        opacity: 0;
+        animation: fadeInUp 0.6s ease forwards;
+      }
+
+      .fade-in-2 {
+        opacity: 0;
+        animation: fadeInUp 0.6s ease forwards 0.2s;
+      }
+
+      .fade-in-3 {
+        opacity: 0;
+        animation: fadeInUp 0.6s ease forwards 0.4s;
+      }
+
+      .fade-in-4 {
+        opacity: 0;
+        animation: fadeInUp 0.6s ease forwards 0.6s;
       }
 
       .name-wrapper {
@@ -52,15 +84,25 @@
         cursor: pointer;
       }
 
-      .fluid-text {
+      .fluid-text-name {
         font-size: clamp(1.5rem, 5vw, 3rem);
+      }
+
+      .fluid-text-title {
+        font-size: clamp(1rem, 3vw, 1.5rem);
+      }
+
+      .fluid-text-body {
+        font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+      }
+
+      .fluid-text-button {
+        font-size: clamp(0.875rem, 2vw, 1rem);
       }
 
       .name-content {
         transition: width 0.5s ease, opacity 0.5s ease;
         display: inline-block;
-        /* width: clamp(200px, 40vw, 320px); */
-        /* width: clamp(210px, 41vw); */
         overflow: hidden;
         white-space: nowrap;
       }
@@ -101,7 +143,7 @@
     <main class="text-center p-8 max-w-[700px] mx-auto">
       <header>
         <h1
-          class="fluid-text font-semibold mb-2 flex items-center justify-center"
+          class="fluid-text-name font-semibold mb-2 flex items-center justify-center fade-in-1"
         >
           <div class="name-wrapper flex items-center">
             <span class="text-white bracket-left mr-1">&lt;</span>
@@ -110,25 +152,29 @@
             >
               Marcos Paulo
             </span>
+            <span class="text-white bracket-right ml-1">🧑🏻‍💻</span>
+            <span class="text-white bracket-right ml-1">&nbsp;</span>
             <span class="text-white bracket-right ml-1">/&gt;</span>
           </div>
         </h1>
-        <p class="text-lg sm:text-xl text-gray-300 mb-6">
+        <p class="fluid-text-title text-gray-300 mb-6 fade-in-2">
           Full Stack JavaScript Developer
         </p>
       </header>
-      <section class="mb-10">
-        <p class="text-gray-300 text-lg leading-relaxed">
+      <section class="mb-10 fade-in-3">
+        <p class="fluid-text-body text-gray-300 leading-relaxed">
           Passionate Full Stack Developer with expertise in modern JavaScript
           frameworks and scalable web applications. Specialized in building
           robust, user-centric solutions using React, Node.js, and related
           technologies.
         </p>
       </section>
-      <nav class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+      <nav
+        class="flex flex-col sm:flex-row gap-4 items-center justify-center fade-in-4"
+      >
         <a
           href="https://www.linkedin.com/in/marcospmail/"
-          class="text-white no-underline border border-white/50 px-6 py-3 rounded-lg w-[180px] transition-all hover:bg-white hover:text-black hover:border-white flex items-center justify-center gap-2 font-medium"
+          class="fluid-text-button text-white no-underline border border-white/50 px-6 py-3 rounded-lg w-[180px] transition-all hover:bg-white hover:text-black hover:border-white flex items-center justify-center gap-2 font-medium"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Visit Marcos Paulo's LinkedIn profile"
@@ -147,7 +193,7 @@
         </a>
         <a
           href="mailto:email@marcosp.com"
-          class="text-white no-underline border border-white/50 px-6 py-3 rounded-lg w-[180px] transition-all hover:bg-white hover:text-black hover:border-white flex items-center justify-center gap-2 font-medium"
+          class="fluid-text-button text-white no-underline border border-white/50 px-6 py-3 rounded-lg w-[180px] transition-all hover:bg-white hover:text-black hover:border-white flex items-center justify-center gap-2 font-medium"
           aria-label="Send email to Marcos Paulo"
         >
           <svg
