@@ -125,6 +125,9 @@
       .name-content {
         display: inline-block;
         white-space: nowrap;
+      }
+
+      .cursor {
         border-right: 1px solid rgba(255, 255, 255, 0.5);
       }
 
@@ -157,6 +160,7 @@
         const nameContent = document.querySelector(".name-content");
         const text = "Marcos Paulo";
         const gradientClass = nameContent.className;
+        nameContent.classList.add("cursor");
 
         function typeWriter(i = 0) {
           if (i <= text.length) {
