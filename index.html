@@ -43,6 +43,19 @@
         }
       }
 
+      :root {
+        height: 100%;
+      }
+
+      body {
+        min-height: 100%;
+        overflow-x: hidden;
+      }
+
+      html {
+        height: 100%;
+      }
+
       @keyframes fadeInUp {
         from {
           opacity: 0;
@@ -178,10 +191,8 @@
       });
     </script>
   </head>
-  <body
-    class="bg-black text-white min-h-screen flex justify-center items-center font-sans"
-  >
-    <main class="text-center p-8 max-w-[700px] mx-auto">
+  <body class="bg-black text-white flex justify-center items-center font-sans">
+    <main class="w-full text-center p-8 max-w-[700px] mx-auto">
       <header>
         <span class="text-white emoji fluid-text-emoji">🧑🏻‍💻</span>
 
