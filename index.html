@@ -1,12 +1,133 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Your Name - Personal Website</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <h1>Welcome to My Website</h1>
-    <p>This is my personal website hosted on GitHub Pages.</p>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Marcos Paulo - Full Stack JavaScript Developer. Experienced web developer specializing in modern JavaScript frameworks and full-stack development."
+    />
+    <meta
+      name="keywords"
+      content="JavaScript Developer, Full Stack Developer, Web Development"
+    />
+    <meta
+      property="og:title"
+      content="Marcos Paulo - Full Stack JavaScript Developer"
+    />
+    <meta
+      property="og:description"
+      content="Experienced web developer specializing in modern JavaScript frameworks and full-stack development."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#000000" />
+    <title>Marcos Paulo </></title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes gradient {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: -200%;
+        }
+      }
+      .animate-gradient {
+        background-size: 200% auto;
+        animation: gradient 4s linear infinite;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-black text-white min-h-screen flex justify-center items-center font-sans"
+  >
+    <main class="text-center p-8 max-w-[700px] mx-auto">
+      <header>
+        <h1
+          class="text-5xl font-semibold mb-2 flex items-center justify-center"
+        >
+          <span
+            class="bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-blue-500 animate-gradient inline-block text-transparent bg-clip-text"
+          >
+            Marcos Paulo
+          </span>
+          <span class="text-white ml-2">&lt;/&gt;</span>
+        </h1>
+        <p class="text-gray-300 text-xl mb-6">
+          Full Stack JavaScript Developer
+        </p>
+      </header>
+      <section class="mb-10">
+        <p class="text-gray-300 text-lg leading-relaxed">
+          Passionate Full Stack Developer with expertise in modern JavaScript
+          frameworks and scalable web applications. Specialized in building
+          robust, user-centric solutions using React, Node.js, and related
+          technologies.
+        </p>
+      </section>
+      <nav class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <a
+          href="https://www.linkedin.com/in/marcospmail/"
+          class="text-white no-underline border border-white/50 px-6 py-3 rounded-lg w-[180px] transition-all hover:bg-white hover:text-black hover:border-white flex items-center justify-center gap-2 font-medium"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Marcos Paulo's LinkedIn profile"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+            />
+          </svg>
+          LinkedIn
+        </a>
+        <a
+          href="mailto:email@marcosp.com"
+          class="text-white no-underline border border-white/50 px-6 py-3 rounded-lg w-[180px] transition-all hover:bg-white hover:text-black hover:border-white flex items-center justify-center gap-2 font-medium"
+          aria-label="Send email to Marcos Paulo"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            />
+          </svg>
+          Email
+        </a>
+      </nav>
+    </main>
+  </body>
 </html>
